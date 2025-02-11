@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
- 
+ import UserProvider from './Context/UserProvider';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
 import "bootstrap-icons/font/bootstrap-icons.css"
@@ -11,7 +11,9 @@ import "react-toastify/ReactToastify.css"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+     <UserProvider>{/* we are passing it as super component */}
     <App />
+     </UserProvider>
   </React.StrictMode>
 );
 
